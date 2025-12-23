@@ -27,178 +27,29 @@ class Operations:
 REQUESTS = {
     DataTypes.Coil : [
         {"address": 1, "length": 41},
-        {"address": 57, "length": 27},
-        {"address": 105, "length": 3},
+        {"address": 83, "length": 1},
         {"address": 212, "length": 15},
     ],
 
     DataTypes.Register: [
-        {"address": 1, "length": 31},
-        {"address": 59, "length": 1},
-        {"address": 194, "length": 8},
-        {"address": 5066, "length": 18},
-        {"address": 5185, "length": 1},
+        {"address": 11, "length": 31},
 
         {"address": MODEL_ADDRESS, "length": MODEL_LENGTH, "op": OP_TYPE_GET_REGISTER},
     ]
 }
 
 MAPPING = {
-    "t_heating": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 200,
-        "entity_type": "temperature"
-    },
-    "t_cooling": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 201,
-        "entity_type": "temperature"
-    },
     "t_dhw": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 8,
-        "entity_type": "temperature"
-    },
-    "t_dg1_h": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 3,
-        "entity_type": "temperature"
-    },
-    "t_dg1_c": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 197,
-        "entity_type": "temperature"
-    },
-    "t_sg2": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 194,
-        "entity_type": "temperature"
-    },
-    "t_sg3": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 195,
-        "entity_type": "temperature"
-    },
-    "t_sg4": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 196,
-        "entity_type": "temperature"
-    },
-    "t_outdoor": {
         "data_type": DataTypes.Register,
         "type": "float",
         "address": 11,
         "entity_type": "temperature"
     },
-    "power_heating": {
-        "data_type": DataTypes.Register,
-        "type": "int",
-        "address": 5083,
-        "entity_type": "power"
-    },
-    "power_cooling": {
-        "data_type": DataTypes.Register,
-        "type": "int",
-        "address": 5185,
-        "entity_type": "power"
-    },
-    "power_electric": {
-        "data_type": DataTypes.Register,
-        "type": "int",
-        "address": 5082,
-        "entity_type": "power"
-    },
-    "power_output": {
-        "data_type": DataTypes.Register,
-        "type": "custom",
-        "entity_type": "power",
-        "value_fn": lambda data, raw: data["power_cooling"] + data["power_heating"]
-    },
-    "t_brine_in": {
+    "t_outdoor": {
         "data_type": DataTypes.Register,
         "type": "float",
-        "address": 2,
+        "address": 20,
         "entity_type": "temperature"
-    },
-    "t_brine_out": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 1,
-        "entity_type": "temperature"
-    },
-    "p_brine": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 13,
-        "entity_type": "pressure"
-    },
-    "p_output": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 14,
-        "entity_type": "pressure"
-    },
-    "cop": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 30,
-        "entity_type": "measurement"
-    },
-    "pf": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 31,
-        "entity_type": "measurement"
-    },
-    "switch_heating": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 105,
-        "entity_type": "switch"
-    },
-    "switch_cooling": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 107,
-        "entity_type": "switch"
-    },
-    "switch_dhw": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 106,
-        "entity_type": "switch"
-    },
-    "switch_dg1_output": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 60,
-        "entity_type": "switch"
-    },
-    "switch_sg2_output": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 57,
-        "entity_type": "switch"
-    },
-    "switch_pool_output": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 65,
-        "entity_type": "switch"
-    },
-    "switch_pool_device_output": {
-        "data_type": DataTypes.Coil,
-        "type": "boolean",
-        "address": 61,
-        "entity_type": "switch"
     },
     "button_reset_alarms": {
         "data_type": DataTypes.Coil,
@@ -209,7 +60,7 @@ MAPPING = {
     "number_dhw_setpoint": {
         "data_type": DataTypes.Register,
         "type": "float",
-        "address": 17,
+        "address": 38,
         "entity_type": "temperature",
         "is_number": True,
         "min": 0,
@@ -219,21 +70,11 @@ MAPPING = {
     "number_dhw_dt_start": {
         "data_type": DataTypes.Register,
         "type": "float",
-        "address": 15,
+        "address": 41,
         "entity_type": "temperature",
         "is_number": True,
         "min": 2,
         "max": 25,
-        "step": 0.1
-    },
-    "number_dhw_htr_set": {
-        "data_type": DataTypes.Register,
-        "type": "float",
-        "address": 59,
-        "entity_type": "temperature",
-        "is_number": True,
-        "min": 0,
-        "max": 70,
         "step": 0.1
     },
     "alarm": {
