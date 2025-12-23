@@ -79,57 +79,6 @@
       },
       "t_dhw": {
         "name": "DHW temperature"
-      },
-      "t_cooling": {
-        "name": "Cooling Tank temperature"
-      },
-      "t_heating": {
-        "name": "Heating Tank temperature"
-      },
-      "t_dg1_h": {
-        "name": "DG1 Heating temperature"
-      },
-      "t_dg1_c": {
-        "name": "DG1 Cooling temperature"
-      },
-      "t_sg2": {
-        "name": "SG2 temperature"
-      },
-      "t_sg3": {
-        "name": "SG3 temperature"
-      },
-      "t_sg4": {
-        "name": "SG4 temperature"
-      },
-      "power_heating": {
-        "name": "Heating power"
-      },
-      "power_cooling": {
-        "name": "Cooling power"
-      },
-      "power_electric": {
-        "name": "Energy consumption"
-      },
-      "power_output": {
-        "name": "Total output power"
-      },
-      "t_brine_in": {
-        "name": "Brine input temperature"
-      },
-      "t_brine_out": {
-        "name": "Brine output temperature"
-      },
-      "p_brine": {
-        "name": "Brine pressure"
-      },
-      "p_output": {
-        "name": "Output pressure"
-      },
-      "cop": {
-        "name": "COP"
-      },
-      "pf": {
-        "name": "PF"
       }
     },
     "number": {
@@ -138,32 +87,6 @@
       },
       "number_dhw_dt_start": {
         "name": "DHW DT start temperature"
-      },
-      "number_dhw_htr_set": {
-        "name": "DHW HTR set temperature"
-      }
-    },
-    "switch": {
-      "switch_heating": {
-        "name": "Heating enabled"
-      },
-      "switch_cooling": {
-        "name": "Cooling enabled"
-      },
-      "switch_dhw": {
-        "name": "DHW enabled"
-      },
-      "switch_dg1_output": {
-        "name": "DG1 Pump"
-      },
-      "switch_sg2_output": {
-        "name": "SG2 Pump"
-      },
-      "switch_pool_output": {
-        "name": "Pool"
-      },
-      "switch_pool_device_output": {
-        "name": "Pool Device"
       }
     },
     "button": {
