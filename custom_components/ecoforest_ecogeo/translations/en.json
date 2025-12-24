@@ -93,6 +93,11 @@
       "button_reset_alarms": {
         "name": "Reset Alarms"
       }
+    },
+    "switch": {
+      "switch_dhw": {
+        "name": "DHW enabled"
+      }
     }
   }
 }

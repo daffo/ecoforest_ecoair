@@ -57,6 +57,12 @@ MAPPING = {
         "address": 83,
         "entity_type": "button"
     },
+    "switch_dhw": {
+        "data_type": DataTypes.Coil,
+        "type": "boolean",
+        "address": 213,
+        "entity_type": "switch"
+    },
     "number_dhw_setpoint": {
         "data_type": DataTypes.Register,
         "type": "float",

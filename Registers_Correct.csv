@@ -6,3 +6,4 @@ Register,41,DHW ΔT start,°C,2,25,R/W,DHW differential temperature to start hea
 Coil,1-41,Alarm registers (various),-,0,1,R,Multiple alarm coils - see get_alarm() function
 Coil,83,Reset Alarm,-,0,1,W,Button to reset alarms
 Coil,212-226,Alarm registers (pCOe & thermostats),-,0,1,R,Extended alarm coils for external devices
+Coil,213,DHW enabled/disabled,-,0,1,R/W,User activation of DHW (0=Disabled | 1=Enabled)
