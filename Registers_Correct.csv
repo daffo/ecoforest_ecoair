@@ -1,7 +1,7 @@
 Type,Modbus Address,Description,Units,Range - min,Range - max,R / W,Remarks
 Register,11,DHW temperature,°C,-,-,R,Domestic Hot Water tank temperature sensor
 Register,20,Outside temperature,°C,-,-,R,Outdoor air temperature sensor
-Register,38,DHW set temperature,°C,0,65,R/W,Domestic Hot Water setpoint temperature
+Register,40,DHW set temperature,°C,0,65,R/W,Domestic Hot Water setpoint temperature
 Register,41,DHW ΔT start,°C,2,25,R/W,DHW differential temperature to start heating
 Coil,1-41,Alarm registers (various),-,0,1,R,Multiple alarm coils - see get_alarm() function
 Coil,83,Reset Alarm,-,0,1,W,Button to reset alarms
