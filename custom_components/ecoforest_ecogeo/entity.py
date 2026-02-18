@@ -63,7 +63,7 @@ class EcoforestEntity(CoordinatorEntity[EcoforestCoordinator]):
         device_id = coordinator.data.model_name if device_alias is None else device_alias
         device_name = MANUFACTURER if device_alias is None else device_alias
 
-        id = f"{device_id}_{key}"
+        id = f"{device_id}_{key}".lower()
         self._attr_unique_id = id
         self.entity_id = f"sensor.{id}"
 
